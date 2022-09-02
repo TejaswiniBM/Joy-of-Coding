@@ -1,0 +1,46 @@
+//Given a string, , consisting of alphabets and digits, find the frequency of each digit in the given string.
+//Print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 9.
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+
+    char *num;
+    int count[10]={0};
+    scanf("%[^\n]", num);   
+    for(int i=0;i<strlen(num);i++)
+    {
+        if(isdigit(num[i]))
+        {
+            if(num[i]=='0')
+                count[0]++;
+            else if(num[i]=='1')
+                count[1]++;
+            else if(num[i]=='2')
+                count[2]++;
+            else if(num[i]=='3')
+                count[3]++;
+            else if(num[i]=='4')
+                count[4]++;
+            else if(num[i]=='5')
+                count[5]++;
+            else if(num[i]=='6')
+                count[6]++;
+            else if(num[i]=='7')
+                count[7]++;
+            else if(num[i]=='8')
+                count[8]++;
+            else
+                count[9]++;
+        }
+        else {
+            continue;
+        }
+    }
+    for(int i=0;i<10;i++)
+            printf("%d ",num[i]);
+    return 0;
+}
