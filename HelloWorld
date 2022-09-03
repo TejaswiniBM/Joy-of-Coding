@@ -1,0 +1,21 @@
+//*two strings: * "Hello, World!" on one line and the input string on the next line.
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+	
+    char s[100];
+    scanf("%[^\n]%*c", s);
+    /*
+    %*[^\n] scans everything until a \n, but doesn't scan in the \n. The asterisk(*) tells it to discard whatever was scanned.
+%*c scans a single character, which will be the \n left over by %*[^\n] in this case. The asterisk instructs scanf to discard the scanned character.
+Both %[ and %c are format specifiers.The asterisks in both the specifiers tell scanf, not to store the data read by these format specifiers.
+*/
+   
+   printf("Hello, World!\n");
+   puts(s);
+    return 0;
+}
