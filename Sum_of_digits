@@ -1,0 +1,19 @@
+//Print the sum of the digits of the five digit number.
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	
+    int n;
+    scanf("%d", &n);
+    int rem=0;
+    do
+    {
+        rem=n%10+rem;
+        n=n/10;
+    }while(n>0);
+    printf("%d",rem);
+    return 0;
+}
