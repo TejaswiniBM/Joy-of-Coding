@@ -1,0 +1,18 @@
+/*Input First, take a character, ch as input. Then take the string, s as input. Lastly, take the sentence sen as input.
+Output Format Print three lines of output. The first line prints the character, ch. The second line prints the string, s.The third line prints the sentence, sen.*/
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    char ch,s[100],sen[100];
+    scanf("%c\n",&ch);
+    printf("%c\n", ch);
+    scanf("%s\n",s);
+    puts(s);
+    scanf("%[^\n]%*c",sen);  
+    puts(sen);
+    return 0;
+}
