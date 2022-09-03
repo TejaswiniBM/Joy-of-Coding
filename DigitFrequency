@@ -8,10 +8,17 @@
 
 int main() {
 
-    char *num;
+    char *num=(char*)malloc(sizeof(char)*1024); 
     int count[10]={0};
-    scanf("%[^\n]", num);   
+    scanf("%[^\n]", num);  
+
     for(int i=0;i<strlen(num);i++)
+    {
+        if(num[i]>='0'&&num[i]<='9')
+            count[num[i]-'0']++;//ascii value of subtraction will be done for ex num[i]=4 which has ascii value=52 ans 0=48 ; 52-48=4
+        
+    }
+    /*for(int i=0;i<strlen(num);i++)
     {
         if(isdigit(num[i]))
         {
@@ -39,8 +46,8 @@ int main() {
         else {
             continue;
         }
-    }
+    }*/
     for(int i=0;i<10;i++)
-            printf("%d ",num[i]);
+            printf("%d ",count[i]);
     return 0;
 }
